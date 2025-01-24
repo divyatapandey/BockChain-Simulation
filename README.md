@@ -106,7 +106,7 @@ Blockchain is valid.
 - Extend the mining process to include rewards.
 
 
-###🤝 Contribution
+## 🤝 Contribution
 Feel free to fork the repository and submit pull requests for improvements or additional features.
 
 
