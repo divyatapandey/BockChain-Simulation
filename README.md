@@ -65,7 +65,7 @@ This project is a beginner-friendly implementation of a **blockchain** using Pyt
 - **Clear display of tamper detection**: Demonstrates how even minor tampering breaks the chain's integrity.
 - **Dynamic transaction management**: Allows custom transactions to be mined into new blocks.
 
-## 📖 Example Output
+### 📖 Example Output
 Mining block #1...
 Block mined successfully! Nonce:13,Hash:0035903a88bb6fa332dc2962f6b96b17b53d8eefd61ace71aea4ed2c8ac13595
 {
