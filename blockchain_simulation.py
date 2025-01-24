@@ -15,7 +15,7 @@ class Block:
     def calcHash(self):
         #Combine block data into a single string
         blockData = (
-            str(self.index) +
+            str(self.idx) +
             str(self.timestamp) +
             json.dumps(self.transactions) +
             self.prevHash +
@@ -45,12 +45,12 @@ class Blockchain:
         self.chain.append(block)
 
     def mineBlock(self,block):
-        print(f"Mining block #{block.index}...")
+        print(f"Mining block #{block.idx}...")
         while True:
             #Keep trying different nonces until the hash starts with the required number of zeros
             block.curHash=block.calcHash()
-            if block.curHash[:self.difficulty] == '0' * self.difficulty:
-                print(f"Block mined successfully! Nonce: {block.nonce},Hash: {block.curHash}")
+            if block.curHash[:self.difficulty]=='0'*self.difficulty:
+                print(f"Block mined successfully! Nonce:{block.nonce},Hash:{block.curHash}")
                 return
             block.nonce+=1
 
@@ -60,7 +60,7 @@ class Blockchain:
     #Create,mine,and add a new block to the chain
     def createNewBlock(self):
         newBlock=Block(
-            index=self.getLatestBlock().index + 1,
+            idx=self.getLatestBlock().idx+1,
             timestamp=int(time.time()),
             transactions=self.pendingTransactions,
             prevHash=self.getLatestBlock().curHash,
@@ -76,10 +76,10 @@ class Blockchain:
             prevBlock = self.chain[i-1]
             #Verifying hash
             if curBlock.curHash != curBlock.calcHash():
-                return f"Tampered Block #{curBlock.index}"
+                return f"Tampered Block #{curBlock.idx}"
 
             if curBlock.prevHash != prevBlock.curHash:
-                return f"Broken Link at Block #{curBlock.index}"
+                return f"Broken Link at Block #{curBlock.idx}"
         return "Blockchain is valid."
 
     def displayChain(self):
