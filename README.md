@@ -100,10 +100,11 @@ Block mined successfully! Nonce:13,Hash:0035903a88bb6fa332dc2962f6b96b17b53d8eef
 Blockchain is valid.
 Blockchain is valid.
 
-## 🚀Future Improvements
--Add support for multiple nodes to simulate a decentralized network.
--Implement digital signatures for secure transaction validation.
--Extend the mining process to include rewards.
+### 🚀Future Improvements
+- Add support for multiple nodes to simulate a decentralized network.
+- Implement digital signatures for secure transaction validation.
+- Extend the mining process to include rewards.
+
 
 🤝 Contribution
 Feel free to fork the repository and submit pull requests for improvements or additional features.
